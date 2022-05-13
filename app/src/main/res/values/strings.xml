@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ELD</string>
+    <string name="profile">Profile</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="delivery_information">Delivery Information</string>
+    <string name="past_records">Past Records</string>
+    <string name="others">Others</string>
+    <string name="settings">Settings</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="j_obando_trucking_system">J Obando Trucking System</string>
+    <string name="maps_and_direction">Maps and Direction</string>
+    <string name="delivery_details">Delivery Details:</string>
+    <string name="client">Client:</string>
+    <string name="location">Location:</string>
+    <string name="name">Name:</string>
+</resources>

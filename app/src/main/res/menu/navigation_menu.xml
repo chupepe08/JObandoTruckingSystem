@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeDashboard"
+        android:icon="@drawable/home"
+        android:title="Dashboard"/>
+    <item
+        android:id="@+id/mapsDirection"
+        android:icon="@drawable/location"
+        android:title="Maps"/>
+
+    <item
+        android:id="@+id/wHours"
+        android:icon="@drawable/clock"
+        android:title="@string/working_hours"/>
+
+    <item
+        android:id="@+id/deliveryInfo"
+        android:icon="@drawable/details"
+        android:title="@string/delivery_information"/>
+
+    <item
+        android:id="@+id/pRecords"
+        android:icon="@drawable/records"
+        android:title="@string/past_records"/>
+
+    <item android:title="@string/others">
+
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings"
+                android:title="@string/settings"/>
+
+            <item
+                android:id="@+id/contactUs"
+                android:icon="@drawable/contact"
+                android:title="@string/contact_us"/>
+
+            <item
+                android:id="@+id/aboutUs"
+                android:icon="@drawable/info"
+                android:title="@string/about_us"/>
+        </menu>
+
+    </item>
+
+</menu>
