@@ -1,6 +1,7 @@
 package com.example.eld;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,25 +37,20 @@ public class MainActivity extends AppCompatActivity {
 
                 if(user.equals("root")){
                     if(pass.equals("admin")){
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setText("Login Successfully");
-                        invalid.setVisibility(View.VISIBLE);
-
+                        passW.setHintTextColor(Color.RED);
                         Intent intent = new Intent(MainActivity.this, dashboard.class);
                         startActivity(intent);
                     }else{
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setVisibility(View.VISIBLE);
-
-                        invalid.setText("Invalid username or password");
-
+                        userN.setHintTextColor(Color.RED);
                         userN.setText("");
                         passW.setText("");
                     }
                 }else{
+                    invalid.setTextColor(Color.RED);
                     TextView invalid = findViewById(R.id.invalid);
                     invalid.setVisibility(View.VISIBLE);
-
+                    userN.setHintTextColor(Color.RED);
+                    passW.setHintTextColor(Color.RED);
                     userN.setText("");
                     passW.setText("");
                 }
