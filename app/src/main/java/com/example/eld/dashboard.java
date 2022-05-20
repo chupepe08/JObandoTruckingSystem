@@ -47,7 +47,7 @@ public class dashboard extends AppCompatActivity {
             System.exit(0);
         } else
         {
-            Toast.makeText(getBaseContext(), "PINDUTIN MO ULIT PARA MAG EXIT TANGA BOBO INUTIL PALAMUNIN", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Press back button again to exit", Toast.LENGTH_SHORT).show();
         }
         backPressedTime = System.currentTimeMillis();
 
