@@ -1,25 +1,29 @@
 package com.example.eld;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     Button login;
-
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         TextView invalid = findViewById(R.id.invalid);
         invalid.setVisibility(View.INVISIBLE);
+
+        TextView invalid2 = findViewById(R.id.invalid2);
+        invalid2.setVisibility(View.INVISIBLE);
 
         login = findViewById(R.id.loginbtn);
 
@@ -36,29 +40,25 @@ public class MainActivity extends AppCompatActivity {
 
                 if(user.equals("root")){
                     if(pass.equals("admin")){
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setText("Login Successfully");
-                        invalid.setVisibility(View.VISIBLE);
-
                         Intent intent = new Intent(MainActivity.this, dashboard.class);
                         startActivity(intent);
                     }else{
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setVisibility(View.VISIBLE);
-
-                        invalid.setText("Invalid username or password");
-
+                        userN.setHintTextColor(Color.RED);
                         userN.setText("");
-                        passW.setText("");
+
                     }
                 }else{
+                    invalid.setTextColor(Color.RED);
                     TextView invalid = findViewById(R.id.invalid);
+                    TextView invalid2 = findViewById(R.id.invalid2);
                     invalid.setVisibility(View.VISIBLE);
-
+                    invalid2.setVisibility(View.VISIBLE);
                     userN.setText("");
                     passW.setText("");
                 }
             }
         });
+
+
     }
 }
