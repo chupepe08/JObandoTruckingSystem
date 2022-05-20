@@ -7,20 +7,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     Button login;
-
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         TextView invalid = findViewById(R.id.invalid);
         invalid.setVisibility(View.INVISIBLE);
+
+        TextView invalid2 = findViewById(R.id.invalid2);
+        invalid2.setVisibility(View.INVISIBLE);
 
         login = findViewById(R.id.loginbtn);
 
@@ -37,24 +40,25 @@ public class MainActivity extends AppCompatActivity {
 
                 if(user.equals("root")){
                     if(pass.equals("admin")){
-                        passW.setHintTextColor(Color.RED);
                         Intent intent = new Intent(MainActivity.this, dashboard.class);
                         startActivity(intent);
                     }else{
                         userN.setHintTextColor(Color.RED);
                         userN.setText("");
-                        passW.setText("");
+
                     }
                 }else{
                     invalid.setTextColor(Color.RED);
                     TextView invalid = findViewById(R.id.invalid);
+                    TextView invalid2 = findViewById(R.id.invalid2);
                     invalid.setVisibility(View.VISIBLE);
-                    userN.setHintTextColor(Color.RED);
-                    passW.setHintTextColor(Color.RED);
+                    invalid2.setVisibility(View.VISIBLE);
                     userN.setText("");
                     passW.setText("");
                 }
             }
         });
+
+
     }
 }
