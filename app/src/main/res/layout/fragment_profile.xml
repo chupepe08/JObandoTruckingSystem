@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/card_background"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
     <LinearLayout
@@ -39,11 +40,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -54,19 +55,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Full Name:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="Andy Lim"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -74,19 +75,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -97,19 +98,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Age:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="22"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -117,19 +118,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -140,19 +141,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Email:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="madilim@gmail.com"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -160,19 +161,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -183,19 +184,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Driving Experience:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="5 years"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -203,19 +204,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -226,19 +227,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Truck Model:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="L300"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -246,19 +247,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
         android:layout_marginTop="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ImageView
             android:layout_width="30dp"
@@ -269,19 +270,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="Plate Number:"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:layout_marginLeft="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:text="RB-0827"
             android:textColor="@color/primary_text"
-            android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:textSize="18dp" />
 
 
     </LinearLayout>
@@ -289,30 +290,30 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:background="@color/dashboard_item_3" />
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:orientation="vertical">
-        
+
         <TextView
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:background="@drawable/bg_btn"
-            android:text="Change Password"
-            android:gravity="center"
-            android:textColor="@color/primary"
-            android:textSize="18dp"
             android:drawableLeft="@drawable/ic_lock"
             android:drawableTint="@color/primary"
-            android:paddingLeft="10dp"/>
-        
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="Change Password"
+            android:textColor="@color/primary"
+            android:textSize="18dp" />
+
     </LinearLayout>
 
 

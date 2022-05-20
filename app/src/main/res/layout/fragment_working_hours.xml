@@ -9,43 +9,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/card_background"
         android:gravity="center"
         android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:onClick="expand"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:contentPadding="20dp">
-
-        <LinearLayout
-            android:id="@+id/expandingLayout"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="expand"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:contentPadding="20dp">
 
-            <TextView
-                android:id="@+id/textViewCountdown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="00:00"
-                android:layout_margin="@dimen/_18sdp"
-                android:textColor="@color/black"
-                android:textSize="60sp" />
+            <LinearLayout
+                android:id="@+id/expandingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/startBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Start"/>
+                <TextView
+                    android:id="@+id/textViewCountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/_18sdp"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="60sp" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/startBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start" />
 
-    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
