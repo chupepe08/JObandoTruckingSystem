@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
                 android:fontFamily="@font/amethysta"
-                android:text="Starbucks"
+                android:text="InsertCompanyName"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/clientText"

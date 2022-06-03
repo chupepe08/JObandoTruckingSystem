@@ -75,7 +75,7 @@ public class addNewDriver extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean insertDriver =  db.insertDriverData(1,fName.getText().toString(), mName.getText().toString(), lName.getText().toString(), Integer.parseInt(age.getText().toString()), Integer.parseInt(exp.getText().toString()), tModel.getText().toString(),tPlateNum.getText().toString());
+                Boolean insertDriver =  db.insertDriverData(3,fName.getText().toString(), mName.getText().toString(), lName.getText().toString(), Integer.parseInt(age.getText().toString()), Integer.parseInt(exp.getText().toString()), tModel.getText().toString(),tPlateNum.getText().toString());
                 Boolean insertUser = db.insertUserData(usernameT.getText().toString(), passwordT.getText().toString(), "Employee");
 
                 if(insertDriver == true && insertUser == true){
