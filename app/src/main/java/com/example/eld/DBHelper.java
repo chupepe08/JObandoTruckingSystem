@@ -11,16 +11,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "Login.db";
 
-    public static final String adminUname = "root";
-    public static final String adminPass = "adminHW";
-
+    public static final String adminUname = "lol";
+    public static final String adminPass = "adminHWbaliw";
     public DBHelper(Context context) {
         super(context, DBNAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("CREATE TABLE users(username TEXT primary key, password TEXT, UserType TEXT)");
+        MyDB.execSQL("CREATE TABLE users(UID TEXT primary key AUTOINCREMENT, username TEXT, password TEXT, UserType TEXT)");
         MyDB.execSQL("CREATE TABLE drivers(EmployeeID int primary key, FirstName TEXT, MiddleName TEXT, LastName TEXT, Age int, DrivingExperience int, TruckModel TEXT, TruckPlateNumber int)");
         MyDB.execSQL("CREATE TABLE currentJob(EmployeeID int primary key, Client TEXT, JobDescription TEXT, JobLocation TEXT, JobDate DATE)");
         MyDB.execSQL("CREATE TABLE completedJob(EmployeeID int primary key, Client TEXT, JobDescription TEXT, JobLocation TEXT, JobDate DATE, JobStatus TEXT)");
@@ -142,15 +141,19 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public Boolean checkUserType(String username){
-        SQLiteDatabase MyDB = this.getReadableDatabase();
-        Cursor cursor = MyDB.rawQuery("SELECT UserType FROM users where username = ?", new String[]{username});
-        String userType = cursor.toString();
-        if (userType.equals("Employer")){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM users where username = ?", new String[]{username});
+        cursor.moveToFirst();
+        String type = cursor.getString(2);
+
+        if(type.equals("Employer")){
             return true;
         }
-        else{
+        else if(type.equals("Employee")){
             return false;
         }
+        return null;
+
     }
     
     public void displayCurrentJob(int employeeID, TextView TClient, TextView TJobDescription, TextView TJobLocation, TextView TJobDate){
