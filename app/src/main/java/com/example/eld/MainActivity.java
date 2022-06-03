@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Boolean checkuserpass = db.checkUsernamePassword(user, pass);
                     if(checkuserpass == true){
-                        Boolean checkusertype = db.checkUserType(db.adminUname);
+                        Boolean checkusertype = db.checkUserType(user);
                         if(checkusertype == true){
-                            Toast.makeText(MainActivity.this, "Sign in successfu1l", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), adminDashboard.class);
                             startActivity(intent);
                         }

@@ -7,12 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "Login.db";
 
-    public static final String adminUname = "lol";
-    public static final String adminPass = "adminHWbaliw";
+    public static final String adminUname = "root";
+    public static final String adminPass = "admin";
     public DBHelper(Context context) {
         super(context, DBNAME, null, 1);
     }
@@ -20,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
         MyDB.execSQL("CREATE TABLE users(UID TEXT primary key AUTOINCREMENT, username TEXT, password TEXT, UserType TEXT)");
-        MyDB.execSQL("CREATE TABLE drivers(EmployeeID int primary key, FirstName TEXT, MiddleName TEXT, LastName TEXT, Age int, DrivingExperience int, TruckModel TEXT, TruckPlateNumber int)");
+        MyDB.execSQL("CREATE TABLE drivers(EmployeeID int primary key AUTOINCREMENT, FirstName TEXT, MiddleName TEXT, LastName TEXT, Age int, DrivingExperience int, TruckModel TEXT, TruckPlateNumber int)");
         MyDB.execSQL("CREATE TABLE currentJob(EmployeeID int primary key, Client TEXT, JobDescription TEXT, JobLocation TEXT, JobDate DATE)");
         MyDB.execSQL("CREATE TABLE completedJob(EmployeeID int primary key, Client TEXT, JobDescription TEXT, JobLocation TEXT, JobDate DATE, JobStatus TEXT)");
 
@@ -87,7 +89,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("Client", Client);
         contentValues.put("JobDescription", JobDescription);
         contentValues.put("JobLocation", JobLocation);
-        contentValues.put("Date", Date);
+        contentValues.put("JobDate", Date);
         long result = MyDB.insert("currentJob", null, contentValues);
 
         if (result == -1){
@@ -143,7 +145,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public Boolean checkUserType(String username){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT * FROM users where username = ?", new String[]{username});
-        cursor.moveToFirst();
+        cursor.moveToNext();
         String type = cursor.getString(2);
 
         if(type.equals("Employer")){
@@ -202,5 +204,27 @@ public class DBHelper extends SQLiteOpenHelper {
             TJobDate.append(cursor.getString(4));
             TJobStatus.append(cursor.getString(5));
         }
+    }
+
+    public ArrayList<String> getDrivers(){
+        ArrayList<String> driverList = new ArrayList<>();
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT LastName FROM drivers", null);
+        while(cursor.moveToNext()){
+            String name = cursor.getString(0);
+            driverList.add(name);
+        }
+
+        return driverList;
+    }
+
+    public int getEmployeeID(String lname){
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT EmployeeID FROM drivers WHERE LastName LIKE ?", new String[]{lname});
+        int eID;
+        cursor.moveToNext();
+
+        eID = cursor.getInt(0);
+        return eID;
     }
 }

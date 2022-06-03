@@ -19,10 +19,12 @@ public class addNewDriver extends AppCompatActivity {
 
     private Button generate;
 
+    DBHelper db = new DBHelper(this);
+
     public AlertDialog.Builder dialogBuilder;
     public AlertDialog dialog;
     public TextView usernameL, passwordL, usernameT, passwordT;
-    public Button copyToClipboard;
+    public Button copyToClipboard, register;
     final Random rand = new Random();
 
     public EditText fName, mName, lName, age, exp, tModel, tPlateNum;
@@ -44,6 +46,9 @@ public class addNewDriver extends AppCompatActivity {
         passwordT = findViewById(R.id.PasswordText);
 
         generate = (Button) findViewById(R.id.generateBtn);
+        register = (Button) findViewById(R.id.registerBtn);
+
+
 
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +68,18 @@ public class addNewDriver extends AppCompatActivity {
                     usernameT.setText(fname + rand.nextInt(100));
                     passwordT.setText(generatePass());
 
+                }
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean insertDriver =  db.insertDriverData(1,fName.getText().toString(), mName.getText().toString(), lName.getText().toString(), Integer.parseInt(age.getText().toString()), Integer.parseInt(exp.getText().toString()), tModel.getText().toString(),tPlateNum.getText().toString());
+                Boolean insertUser = db.insertUserData(usernameT.getText().toString(), passwordT.getText().toString(), "Employee");
+
+                if(insertDriver == true && insertUser == true){
+                    Toast.makeText(addNewDriver.this, "Data added successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

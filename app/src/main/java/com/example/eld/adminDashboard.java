@@ -16,7 +16,9 @@ public class adminDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_admin_dashboard);
 
         ImageView addDriver = findViewById(R.id.addDriverImage);
+        ImageView assignJob = findViewById(R.id.assignNewJobImage);
         TextView addDiverT = findViewById(R.id.addDriverText);
+        TextView assignJobT = findViewById(R.id.addWorkText);
 
         addDriver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,22 @@ public class adminDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), addNewDriver.class);
+                startActivity(intent);
+            }
+        });
+
+        assignJobT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), assignJob.class);
+                startActivity(intent);
+            }
+        });
+
+        assignJob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), assignJob.class);
                 startActivity(intent);
             }
         });
