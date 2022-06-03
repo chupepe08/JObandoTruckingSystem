@@ -58,7 +58,7 @@ public class assignJob extends AppCompatActivity {
                 int eid = db.getEmployeeID(autoCompleteTextView.getText().toString());
 
 
-                Boolean check = db.insertCurrentJob(2, clientName.getText().toString(), jobDetails.getText().toString(), jobLocation.getText().toString(), jobDate.getText().toString());
+                Boolean check = db.insertCurrentJob(eid, clientName.getText().toString(), jobDetails.getText().toString(), jobLocation.getText().toString(), jobDate.getText().toString());
 
                 if(check == true){
                     Toast.makeText(assignJob.this, "Job has been assigned", Toast.LENGTH_SHORT).show();
