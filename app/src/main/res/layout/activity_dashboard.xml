@@ -44,7 +44,7 @@
                 android:id="@+id/notificationMenu"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_margin="5dp"
+                android:layout_margin="20dp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_baseline_notifications_24"
                 app:tint="@color/white"/>

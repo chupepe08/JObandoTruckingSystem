@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     Button login;
+    DBHelper db = new DBHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         DBHelper database = new DBHelper(this);
         login = findViewById(R.id.loginbtn);
 
+        db.createAdmin();
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,30 +32,28 @@ public class MainActivity extends AppCompatActivity {
                 TextView passW = findViewById(R.id.pass);
                 String pass = passW.getText().toString();
 
-                if(user.equals("root")){
-                    if(pass.equals("admin")){
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setText("Login Successfully");
-                        invalid.setVisibility(View.VISIBLE);
+                if(userN.equals("") || passW.equals("")){
+                    Toast.makeText(MainActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Boolean checkuserpass = db.checkUsernamePassword(user, pass);
+                    if(checkuserpass == true){
+                        Boolean checkusertype = db.checkUserType(db.adminUname);
+                        if(checkusertype == true){
+                            Toast.makeText(MainActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), adminDashboard.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(MainActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), dashboard.class);
+                            startActivity(intent);
+                        }
 
-                        Intent newAct = new Intent(MainActivity.this, dashboard.class);
-                        startActivity(newAct);
-
-                    }else{
-                        TextView invalid = findViewById(R.id.invalid);
-                        invalid.setVisibility(View.VISIBLE);
-
-                        invalid.setText("Invalid username or password");
-
-                        userN.setText("");
-                        passW.setText("");
                     }
-                }else{
-                    TextView invalid = findViewById(R.id.invalid);
-                    invalid.setVisibility(View.VISIBLE);
-
-                    userN.setText("");
-                    passW.setText("");
+                    else {
+                        Toast.makeText(MainActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
