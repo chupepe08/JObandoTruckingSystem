@@ -1,4 +1,4 @@
-package com.example.eld;
+package com.jobandotrucking.eld;
 
 import android.content.ContentValues;
 import android.content.Context;

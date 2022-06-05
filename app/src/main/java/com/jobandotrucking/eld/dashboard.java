@@ -1,4 +1,4 @@
-package com.example.eld;
+package com.jobandotrucking.eld;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +12,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.eld.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class dashboard extends AppCompatActivity {

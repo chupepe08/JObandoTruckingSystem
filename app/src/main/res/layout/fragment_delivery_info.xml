@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".deliveryInfoFragment">
+    tools:context="com.jobandotrucking.eld.deliveryInfoFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/deliveryInfoViewer"
