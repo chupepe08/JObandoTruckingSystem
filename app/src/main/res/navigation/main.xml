@@ -6,47 +6,47 @@
     app:startDestination="@+id/homeDashboard">
     <fragment
         android:id="@+id/homeDashboard"
-        android:name="com.example.eld.dashboardFragment"
+        android:name="com.jobandotrucking.eld.dashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/mapsDirection"
-        android:name="com.example.eld.mapsDirectionFragment"
+        android:name="com.jobandotrucking.eld.mapsDirectionFragment"
         android:label="Maps and Direction"
         tools:layout="@layout/fragment_maps_direction" />
     <fragment
         android:id="@+id/deliveryInfo"
-        android:name="com.example.eld.deliveryInfoFragment"
+        android:name="com.jobandotrucking.eld.deliveryInfoFragment"
         android:label="Delivery Information"
         tools:layout="@layout/fragment_delivery_info" />
     <fragment
         android:id="@+id/pRecords"
-        android:name="com.example.eld.pastRecordsFragment"
+        android:name="com.jobandotrucking.eld.pastRecordsFragment"
         android:label="Past Records"
         tools:layout="@layout/fragment_past_records" />
     <fragment
         android:id="@+id/settings"
-        android:name="com.example.eld.settingsFragment"
+        android:name="com.jobandotrucking.eld.settingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/contactUs"
-        android:name="com.example.eld.contactUsFragment"
+        android:name="com.jobandotrucking.eld.contactUsFragment"
         android:label="Contact Us"
         tools:layout="@layout/fragment_contact_us" />
     <fragment
         android:id="@+id/wHours"
-        android:name="com.example.eld.workingHoursFragment"
+        android:name="com.jobandotrucking.eld.workingHoursFragment"
         android:label="Working Hours"
         tools:layout="@layout/fragment_working_hours" />
     <fragment
         android:id="@+id/aboutUs"
-        android:name="com.example.eld.aboutUsFragment"
+        android:name="com.jobandotrucking.eld.aboutUsFragment"
         android:label="About Us"
         tools:layout="@layout/fragment_about_us" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.eld.ProfileFragment"
+        android:name="com.jobandotrucking.eld.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

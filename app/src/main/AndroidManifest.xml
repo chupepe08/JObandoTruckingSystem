@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ELD" >
         <activity
-            android:name=".assignJob"
+            android:name="com.jobandotrucking.eld.assignJob"
             android:exported="false" />
         <activity
-            android:name=".addNewDriver"
+            android:name="com.jobandotrucking.eld.addNewDriver"
             android:exported="false" />
         <activity
-            android:name=".adminDashboard"
+            android:name="com.jobandotrucking.eld.adminDashboard"
             android:exported="false" />
 
         <meta-data
@@ -31,10 +31,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".dashboard"
+            android:name="com.jobandotrucking.eld.dashboard"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.jobandotrucking.eld.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

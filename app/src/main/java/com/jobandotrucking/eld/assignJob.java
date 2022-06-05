@@ -1,4 +1,4 @@
-package com.example.eld;
+package com.jobandotrucking.eld;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.eld.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class assignJob extends AppCompatActivity {

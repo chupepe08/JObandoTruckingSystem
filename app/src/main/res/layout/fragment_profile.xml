@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/card_background"
     android:orientation="vertical"
-    tools:context=".ProfileFragment">
+    tools:context="com.jobandotrucking.eld.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

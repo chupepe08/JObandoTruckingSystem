@@ -1,4 +1,4 @@
-package com.example.eld;
+package com.jobandotrucking.eld;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.eld.R;
 
 import java.util.Random;
 
