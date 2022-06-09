@@ -10,18 +10,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.eld.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class addNewDriver extends AppCompatActivity {
 
     private Button generate;
 
-    DBHelper db = new DBHelper(this);
 
     public AlertDialog.Builder dialogBuilder;
     public AlertDialog dialog;
@@ -29,26 +35,31 @@ public class addNewDriver extends AppCompatActivity {
     public Button copyToClipboard, register;
     final Random rand = new Random();
 
-    public EditText fName, mName, lName, age, exp, tModel, tPlateNum;
+    FirebaseFirestore db;
+
+    public EditText fName, mName, lName, email, age, exp, tModel, tPlateNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_driver);
 
-        fName = (EditText) findViewById(R.id.fname);
-        mName = (EditText) findViewById(R.id.mname);
-        lName = (EditText) findViewById(R.id.lname);
+        db = FirebaseFirestore.getInstance();
+
+        fName = (EditText) findViewById(R.id.fName);
+        mName = (EditText) findViewById(R.id.mName);
+        lName = (EditText) findViewById(R.id.lName);
+        email = (EditText) findViewById(R.id.email);
         age = (EditText) findViewById(R.id.age);
-        exp = (EditText) findViewById(R.id.exp);
-        tModel = (EditText) findViewById(R.id.tmodel);
-        tPlateNum = (EditText) findViewById(R.id.platenum);
+        exp = (EditText) findViewById(R.id.dExp);
+        tModel = (EditText) findViewById(R.id.tModel);
+        tPlateNum = (EditText) findViewById(R.id.pNumber);
 
         usernameT = findViewById(R.id.userNameText);
         passwordT = findViewById(R.id.PasswordText);
 
-        generate = (Button) findViewById(R.id.generateBtn);
-        register = (Button) findViewById(R.id.registerBtn);
+        generate = (Button) findViewById(R.id.generate);
+        register = (Button) findViewById(R.id.register);
 
 
 
@@ -77,12 +88,39 @@ public class addNewDriver extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean insertDriver =  db.insertDriverData(3,fName.getText().toString(), mName.getText().toString(), lName.getText().toString(), Integer.parseInt(age.getText().toString()), Integer.parseInt(exp.getText().toString()), tModel.getText().toString(),tPlateNum.getText().toString());
-                Boolean insertUser = db.insertUserData(usernameT.getText().toString(), passwordT.getText().toString(), "Employee");
 
-                if(insertDriver == true && insertUser == true){
-                    Toast.makeText(addNewDriver.this, "Data added successfully", Toast.LENGTH_SHORT).show();
-                }
+                String FName = fName.getText().toString();
+                String MName = mName.getText().toString();
+                String LName = lName.getText().toString();
+                String FullName = FName + MName + LName;
+                String Email = email.getText().toString();
+                String Age = age.getText().toString();
+                String DYears = exp.getText().toString();
+                String TModel = tModel.getText().toString();
+                String PNumber = tPlateNum.getText().toString();
+
+                Map<String, Object> drivers = new HashMap<>();
+                drivers.put("Full Name", FullName);
+                drivers.put("First Name", FName);
+                drivers.put("Middle Name", MName);
+                drivers.put("Last Name", LName);
+                drivers.put("Age", Age);
+                drivers.put("Email", Email);
+                drivers.put("Driving Experience", DYears);
+                drivers.put("Truck Model", TModel);
+                drivers.put("Plate Number", PNumber);
+
+                db.collection("drivers").add(drivers).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(addNewDriver.this, "Register Success", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(addNewDriver.this, "Register Failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }

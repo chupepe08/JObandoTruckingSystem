@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,41 +10,41 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.jobandotrucking.eld.addNewDriver">
+        android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="200dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/amethysta"
-        android:text="J Obando"
-        android:textSize="@dimen/_30sdp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="200dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/amethysta"
+            android:text="J Obando"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="139dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dribbble_072_4x" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="139dp"
+            android:layout_height="141dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dribbble_072_4x" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="135dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/amethysta"
-        android:text="Trucking System"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="135dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/amethysta"
+            android:text="Trucking System"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <View
             android:id="@+id/view"
@@ -54,223 +55,202 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.266" />
+            app:layout_constraintVertical_bias="0.253" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/amethysta"
-            android:text="First Name: "
-            android:textSize="16sp"
+            android:text="Register Driver"
+            android:textSize="34sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toTopOf="@+id/view" />
 
         <EditText
-            android:id="@+id/fname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+            android:id="@+id/fName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Middle Name: "
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Last Name: "
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Age: "
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Experience:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Truck Model"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Plate Number:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
         <EditText
-            android:id="@+id/mname"
-            android:layout_width="wrap_content"
+            android:id="@+id/mName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
             android:ems="10"
+            android:hint="Middle Name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/fname"
-            app:layout_constraintTop_toBottomOf="@+id/fname"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fName" />
 
         <EditText
-            android:id="@+id/lname"
-            android:layout_width="wrap_content"
+            android:id="@+id/lName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
             android:ems="10"
+            android:hint="Last Name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/mname"
-            app:layout_constraintTop_toBottomOf="@+id/mname"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/exp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/age"
-            app:layout_constraintTop_toBottomOf="@+id/age"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/tmodel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/exp"
-            app:layout_constraintTop_toBottomOf="@+id/exp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/platenum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tmodel"
-            app:layout_constraintTop_toBottomOf="@+id/tmodel"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mName" />
 
         <EditText
             android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="Age"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lName" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+
+        <EditText
+            android:id="@+id/dExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="Driving Experience"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/tModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="Truck Model"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dExp" />
+
+        <EditText
+            android:id="@+id/pNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="Plate Number"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tModel" />
+
+        <Button
+            android:id="@+id/generate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="44dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
+            android:text="Generate Username &amp; Password"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/lname"
-            app:layout_constraintTop_toBottomOf="@+id/lname"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/generateBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="68dp"
-            android:text="Generate Username and Password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/platenum" />
+            app:layout_constraintTop_toBottomOf="@+id/pNumber" />
 
         <Button
-            android:id="@+id/registerBtn"
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:text="Register New Driver"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/generateBtn"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="@+id/generateBtn"
-            app:layout_constraintTop_toBottomOf="@+id/generateBtn"
-            app:layout_constraintVertical_bias="0.0" />
+            android:text="Register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/generate" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>
+
